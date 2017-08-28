@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Deck.destroy_all
+Round.destroy_all
+User.destroy_all
+
+@deck = Deck.create(name: "TESTING THE DECK")
+@user = User.create!(username: "USername test", password: "testpassword")
+@card = Card.create(question: "What is your name", answer: "JEn hawk", deck_id: @deck.id, user_id: @user.id)

@@ -1,0 +1,11 @@
+<%= form_for @card, url: { action: 'create' } do |f| %>
+  <%= f.label :question, 'Question: ' %>
+  <%= f.text_field :question %>
+  <br>
+  <br>
+  <%= f.label :answer, 'Answer: ' %>
+  <%= f.text_field :answer %>
+  <br>
+  <br>
+  <%= submit_tag 'Submit new flashcard' %>
+<% end %>
