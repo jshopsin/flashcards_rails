@@ -1,0 +1,6 @@
+<h1>DECKS ARE HERE</h1>
+<%@decks.each do |deck| %>
+  <ul>
+    <li><%= link_to deck.name, deck_path(deck) %></li>
+  </ul>
+<% end %>

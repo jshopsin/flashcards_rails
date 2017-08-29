@@ -1,0 +1,11 @@
+<%= @deck.name %>
+
+<%= link_to "Start Round", deck_rounds_path(@deck), method: :post %>
+
+<ul>
+  <% @deck.cards.each do |card| %>
+    <li><%= card.question %></li>
+  <% end %>
+</ul>
+
+<%= link_to "Create new flashcard", new_deck_card_path(@deck) %>
