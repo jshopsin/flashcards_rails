@@ -1,1 +1,17 @@
-<h1>Show Card.</h1>
+<h1>Question:</h1>
+<%= @card.question %>
+
+<br>
+<br>
+
+<%=form_for [@card, @guess] do |f| %>
+  <%= label_tag :given_answer, 'Answer: ' %>
+  <%= text_field_tag :given_answer %>
+  <%=f.hidden_field :round_id, value: @round.id %>
+  <%= submit_tag 'Submit Answer' %>
+<% end %>
+
+<% if @guess %>
+  <p>Incorrect Answer, try again.</p>
+  <p>You have guessed <%= @guess.guess_counter %> time(s).</p>
+<% end %>

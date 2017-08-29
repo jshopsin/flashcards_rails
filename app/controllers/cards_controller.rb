@@ -4,6 +4,17 @@ class CardsController < ApplicationController
     @deck = Deck.find(params[:deck_id])
   end
 
+  def show
+    @card = Card.find_by(id: params[:id])
+    @round = Round.find_by(id: params[:round_id])
+    @guess = Guess.find_by(round_id: @round.id, card_id: @card.id)
+    if !@guess
+      @guess = Guess.new
+    end
+    puts "*"*50
+    puts "@guess: #{@guess}"
+  end
+
   def create
     @card = Card.new(card_params)
     @card.user = current_user

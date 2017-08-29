@@ -1068,3 +1068,1801 @@ Processing by DecksController#show as HTML
 Completed 200 OK in 23ms (Views: 19.1ms | ActiveRecord: 1.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-08-28 16:04:04 -0700
+Processing by DecksController#index as HTML
+  Rendering decks/index.html.erb within layouts/application
+  [1m[36mDeck Load (0.5ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  Rendered decks/index.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 20ms (Views: 18.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/decks/1" for 127.0.0.1 at 2017-08-28 16:04:55 -0700
+Processing by DecksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDeck Load (0.2ms)[0m  [1m[34mSELECT  "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering decks/show.html.erb within layouts/application
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 1]]
+  Rendered decks/show.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 22ms (Views: 18.9ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/decks/1/rounds" for 127.0.0.1 at 2017-08-28 16:04:59 -0700
+Processing by RoundsController#create as HTML
+  Parameters: {"authenticity_token"=>"jwNoAP/bIlrbYoJ0cAlXxMPPPaxVi6VIukC1a0FNn9MrqAd8H5gPlY+Rab1KjWoB5B/3NkUXQs/zm5cSSv/82w==", "deck_id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDeck Load (0.2ms)[0m  [1m[34mSELECT  "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/decks
+Completed 302 Found in 18ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/decks" for 127.0.0.1 at 2017-08-28 16:04:59 -0700
+Processing by DecksController#index as HTML
+  Rendering decks/index.html.erb within layouts/application
+  [1m[36mDeck Load (0.3ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  Rendered decks/index.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 19ms (Views: 17.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/decks/1" for 127.0.0.1 at 2017-08-28 16:05:05 -0700
+Processing by DecksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDeck Load (0.3ms)[0m  [1m[34mSELECT  "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering decks/show.html.erb within layouts/application
+  [1m[36mCard Load (0.6ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 1]]
+  Rendered decks/show.html.erb within layouts/application (4.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 25ms (Views: 21.1ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/decks/1/rounds" for 127.0.0.1 at 2017-08-28 16:05:14 -0700
+Processing by RoundsController#create as HTML
+  Parameters: {"authenticity_token"=>"FX+dvyUVirFjpF66MtysXX1yQpTEzVtMhlk1v83dLjix1PLDxVanfjdXtXMIWJGYWqKIDtRRvMvPghfGxm9NMA==", "deck_id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDeck Load (0.1ms)[0m  [1m[34mSELECT  "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/decks
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/decks" for 127.0.0.1 at 2017-08-28 16:05:14 -0700
+Processing by DecksController#index as HTML
+  Rendering decks/index.html.erb within layouts/application
+  [1m[36mDeck Load (0.3ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  Rendered decks/index.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 22ms (Views: 19.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/decks" for 127.0.0.1 at 2017-08-28 16:10:04 -0700
+Processing by DecksController#index as HTML
+  Rendering decks/index.html.erb within layouts/application
+  [1m[36mDeck Load (0.4ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  Rendered decks/index.html.erb within layouts/application (5.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 37ms (Views: 30.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/decks/1" for 127.0.0.1 at 2017-08-28 16:10:06 -0700
+Processing by DecksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDeck Load (0.2ms)[0m  [1m[34mSELECT  "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering decks/show.html.erb within layouts/application
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 1]]
+  Rendered decks/show.html.erb within layouts/application (16.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 40ms (Views: 28.7ms | ActiveRecord: 4.5ms)
+
+
+Started POST "/decks/1/rounds" for 127.0.0.1 at 2017-08-28 16:10:07 -0700
+Processing by RoundsController#create as HTML
+  Parameters: {"authenticity_token"=>"yJYzNmhQVO+4L684S+GkeftTzr/XiyQUooWYaaXNPV9sPVxKiBN5IOzcRPFxZZm83IMEJccXw5PrXroQrn9eVw==", "deck_id"=>"1"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDeck Load (0.3ms)[0m  [1m[34mSELECT  "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/decks
+Completed 302 Found in 19ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/decks" for 127.0.0.1 at 2017-08-28 16:10:07 -0700
+Processing by DecksController#index as HTML
+  Rendering decks/index.html.erb within layouts/application
+  [1m[36mDeck Load (0.5ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  Rendered decks/index.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 30ms (Views: 27.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/decks" for 127.0.0.1 at 2017-08-28 16:13:20 -0700
+Processing by DecksController#index as HTML
+  Rendering decks/index.html.erb within layouts/application
+  [1m[36mDeck Load (0.3ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  Rendered decks/index.html.erb within layouts/application (4.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 52ms (Views: 45.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/decks/1" for 127.0.0.1 at 2017-08-28 16:13:22 -0700
+Processing by DecksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDeck Load (0.2ms)[0m  [1m[34mSELECT  "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering decks/show.html.erb within layouts/application
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 1]]
+  Rendered decks/show.html.erb within layouts/application (10.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 38ms (Views: 28.4ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/decks/1/rounds" for 127.0.0.1 at 2017-08-28 16:13:23 -0700
+Processing by RoundsController#create as HTML
+  Parameters: {"authenticity_token"=>"CgagkJLHhpJ3crVMNQbPq+hxfiKSkJiwuth3KMjpnZiurc/scoSrXSOBXoUPgvJuz6G0uIIMfzfzA1VRw1v+kA==", "deck_id"=>"1"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDeck Load (0.2ms)[0m  [1m[34mSELECT  "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"cards", :deck_id=>"1", :round_id=>[#<Round id: nil, user_id: 1, deck_id: 1, created_at: nil, updated_at: nil>, #<Card id: 1, question: "What is your name", answer: "JEn hawk", deck_id: 1, user_id: 1, created_at: "2017-08-28 21:45:01", updated_at: "2017-08-28 21:45:01">]} missing required keys: [:id]):
+  
+app/controllers/rounds_controller.rb:8:in `create'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.8ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (96.8ms)
+Started POST "/decks/1/rounds" for 127.0.0.1 at 2017-08-28 16:14:39 -0700
+Processing by RoundsController#create as HTML
+  Parameters: {"authenticity_token"=>"CgagkJLHhpJ3crVMNQbPq+hxfiKSkJiwuth3KMjpnZiurc/scoSrXSOBXoUPgvJuz6G0uIIMfzfzA1VRw1v+kA==", "deck_id"=>"1"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDeck Load (0.2ms)[0m  [1m[34mSELECT  "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 3.3ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :card_id=>#<Card id: 1, question: "What is your name", answer: "JEn hawk", deck_id: 1, user_id: 1, created_at: "2017-08-28 21:45:01", updated_at: "2017-08-28 21:45:01">, :controller=>"cards", :deck_id=>"1", :round_id=>#<Round id: nil, user_id: 1, deck_id: 1, created_at: nil, updated_at: nil>} missing required keys: [:id, :round_id]):
+  
+app/controllers/rounds_controller.rb:8:in `create'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.8ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (89.1ms)
+Started POST "/decks/1/rounds" for 127.0.0.1 at 2017-08-28 16:15:18 -0700
+Processing by RoundsController#create as HTML
+  Parameters: {"authenticity_token"=>"CgagkJLHhpJ3crVMNQbPq+hxfiKSkJiwuth3KMjpnZiurc/scoSrXSOBXoUPgvJuz6G0uIIMfzfzA1VRw1v+kA==", "deck_id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDeck Load (0.1ms)[0m  [1m[34mSELECT  "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :card_id=>#<Card id: 1, question: "What is your name", answer: "JEn hawk", deck_id: 1, user_id: 1, created_at: "2017-08-28 21:45:01", updated_at: "2017-08-28 21:45:01">, :controller=>"cards", :deck_id=>"1", :round_id=>#<Round id: nil, user_id: 1, deck_id: 1, created_at: nil, updated_at: nil>} missing required keys: [:id, :round_id]):
+  
+app/controllers/rounds_controller.rb:8:in `create'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.3ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (91.6ms)
+Started POST "/decks/1/rounds" for 127.0.0.1 at 2017-08-28 16:15:46 -0700
+Processing by RoundsController#create as HTML
+  Parameters: {"authenticity_token"=>"CgagkJLHhpJ3crVMNQbPq+hxfiKSkJiwuth3KMjpnZiurc/scoSrXSOBXoUPgvJuz6G0uIIMfzfzA1VRw1v+kA==", "deck_id"=>"1"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDeck Load (0.2ms)[0m  [1m[34mSELECT  "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"cards", :deck_id=>"1", :round_id=>[#<Round id: nil, user_id: 1, deck_id: 1, created_at: nil, updated_at: nil>, #<Card id: 1, question: "What is your name", answer: "JEn hawk", deck_id: 1, user_id: 1, created_at: "2017-08-28 21:45:01", updated_at: "2017-08-28 21:45:01">]} missing required keys: [:id]):
+  
+app/controllers/rounds_controller.rb:8:in `create'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.6ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (88.8ms)
+Started PUT "/__web_console/repl_sessions/de36fdb8e0033a037a367cc880029d2b" for 127.0.0.1 at 2017-08-28 16:17:29 -0700
+Started PUT "/__web_console/repl_sessions/de36fdb8e0033a037a367cc880029d2b" for 127.0.0.1 at 2017-08-28 16:17:30 -0700
+Started PUT "/__web_console/repl_sessions/de36fdb8e0033a037a367cc880029d2b" for 127.0.0.1 at 2017-08-28 16:17:49 -0700
+Started PUT "/__web_console/repl_sessions/de36fdb8e0033a037a367cc880029d2b" for 127.0.0.1 at 2017-08-28 16:17:51 -0700
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Started PUT "/__web_console/repl_sessions/de36fdb8e0033a037a367cc880029d2b" for 127.0.0.1 at 2017-08-28 16:17:54 -0700
+Started PUT "/__web_console/repl_sessions/de36fdb8e0033a037a367cc880029d2b" for 127.0.0.1 at 2017-08-28 16:17:55 -0700
+Started PUT "/__web_console/repl_sessions/de36fdb8e0033a037a367cc880029d2b" for 127.0.0.1 at 2017-08-28 16:17:56 -0700
+Started GET "/decks/1" for 127.0.0.1 at 2017-08-28 16:18:23 -0700
+Processing by DecksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDeck Load (0.4ms)[0m  [1m[34mSELECT  "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering decks/show.html.erb within layouts/application
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 1]]
+  Rendered decks/show.html.erb within layouts/application (10.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 49ms (Views: 33.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/decks/1/rounds" for 127.0.0.1 at 2017-08-28 16:18:25 -0700
+Processing by RoundsController#create as HTML
+  Parameters: {"authenticity_token"=>"nGL6pJE9VKVSzDlkTSuS6uf7tABMgX1h9M31uZ7UkYo4yZXYcX55agY/0q13r68vwCt+mlwdmua9FtfAlWbygg==", "deck_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDeck Load (0.2ms)[0m  [1m[34mSELECT  "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "rounds" ("user_id", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["deck_id", 1], ["created_at", "2017-08-28 23:18:25.058979"], ["updated_at", "2017-08-28 23:18:25.058979"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 4.5ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"cards", :deck_id=>"1", :round_id=>[#<Round id: 1, user_id: 1, deck_id: 1, created_at: "2017-08-28 23:18:25", updated_at: "2017-08-28 23:18:25">, #<Card id: 1, question: "What is your name", answer: "JEn hawk", deck_id: 1, user_id: 1, created_at: "2017-08-28 21:45:01", updated_at: "2017-08-28 21:45:01">]} missing required keys: [:id]):
+  
+app/controllers/rounds_controller.rb:9:in `create'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (96.2ms)
+Started PUT "/__web_console/repl_sessions/6fb59e8606156eb4fb0c804802255527" for 127.0.0.1 at 2017-08-28 16:18:36 -0700
+Started PUT "/__web_console/repl_sessions/6fb59e8606156eb4fb0c804802255527" for 127.0.0.1 at 2017-08-28 16:18:37 -0700
+Started PUT "/__web_console/repl_sessions/6fb59e8606156eb4fb0c804802255527" for 127.0.0.1 at 2017-08-28 16:18:39 -0700
+Started PUT "/__web_console/repl_sessions/6fb59e8606156eb4fb0c804802255527" for 127.0.0.1 at 2017-08-28 16:18:42 -0700
+Started PUT "/__web_console/repl_sessions/6fb59e8606156eb4fb0c804802255527" for 127.0.0.1 at 2017-08-28 16:18:42 -0700
+Started POST "/decks/1/rounds" for 127.0.0.1 at 2017-08-28 16:20:18 -0700
+Processing by RoundsController#create as HTML
+  Parameters: {"authenticity_token"=>"nGL6pJE9VKVSzDlkTSuS6uf7tABMgX1h9M31uZ7UkYo4yZXYcX55agY/0q13r68vwCt+mlwdmua9FtfAlWbygg==", "deck_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDeck Load (0.2ms)[0m  [1m[34mSELECT  "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "rounds" ("user_id", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["deck_id", 1], ["created_at", "2017-08-28 23:20:18.423089"], ["updated_at", "2017-08-28 23:20:18.423089"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/rounds/2/cards/1
+Completed 302 Found in 42ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/rounds/2/cards/1" for 127.0.0.1 at 2017-08-28 16:20:18 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"round_id"=>"2", "id"=>"1"}
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cards/show.html.erb within layouts/application
+  Rendered cards/show.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 23ms (Views: 19.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/decks/1/rounds" for 127.0.0.1 at 2017-08-28 16:20:27 -0700
+Processing by RoundsController#create as HTML
+  Parameters: {"authenticity_token"=>"nGL6pJE9VKVSzDlkTSuS6uf7tABMgX1h9M31uZ7UkYo4yZXYcX55agY/0q13r68vwCt+mlwdmua9FtfAlWbygg==", "deck_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDeck Load (0.2ms)[0m  [1m[34mSELECT  "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "rounds" ("user_id", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["deck_id", 1], ["created_at", "2017-08-28 23:20:27.575523"], ["updated_at", "2017-08-28 23:20:27.575523"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/rounds/3/cards/1
+Completed 302 Found in 7ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/rounds/3/cards/1" for 127.0.0.1 at 2017-08-28 16:20:27 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"round_id"=>"3", "id"=>"1"}
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cards/show.html.erb within layouts/application
+  Rendered cards/show.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 22ms (Views: 18.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/decks/1/rounds" for 127.0.0.1 at 2017-08-28 16:20:35 -0700
+Processing by RoundsController#create as HTML
+  Parameters: {"authenticity_token"=>"nGL6pJE9VKVSzDlkTSuS6uf7tABMgX1h9M31uZ7UkYo4yZXYcX55agY/0q13r68vwCt+mlwdmua9FtfAlWbygg==", "deck_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDeck Load (0.3ms)[0m  [1m[34mSELECT  "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "rounds" ("user_id", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["deck_id", 1], ["created_at", "2017-08-28 23:20:35.805739"], ["updated_at", "2017-08-28 23:20:35.805739"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/rounds/4/cards/1
+Completed 302 Found in 8ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/rounds/4/cards/1" for 127.0.0.1 at 2017-08-28 16:20:35 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"round_id"=>"4", "id"=>"1"}
+  [1m[36mCard Load (0.5ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cards/show.html.erb within layouts/application
+  Rendered cards/show.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 22ms (Views: 18.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-28 16:20:46 -0700
+Processing by DecksController#index as HTML
+  Rendering decks/index.html.erb within layouts/application
+  [1m[36mDeck Load (0.3ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  Rendered decks/index.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 21ms (Views: 18.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-28 16:22:18 -0700
+Processing by DecksController#index as HTML
+  Rendering decks/index.html.erb within layouts/application
+  [1m[36mDeck Load (0.3ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  Rendered decks/index.html.erb within layouts/application (5.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 38ms (Views: 30.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/decks/1" for 127.0.0.1 at 2017-08-28 16:22:20 -0700
+Processing by DecksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDeck Load (0.2ms)[0m  [1m[34mSELECT  "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering decks/show.html.erb within layouts/application
+  [1m[36mCard Load (0.6ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 1]]
+  Rendered decks/show.html.erb within layouts/application (13.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 42ms (Views: 33.7ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/decks/1/rounds" for 127.0.0.1 at 2017-08-28 16:22:21 -0700
+Processing by RoundsController#create as HTML
+  Parameters: {"authenticity_token"=>"P/MCI2Y7RcWzFjuu8isBtsSXwVgC1Q29GQZicSZn8ZCbWG1fhnhoCufl0GfIrzxz40cLwhJJ6jpQ3UAILdWSmA==", "deck_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDeck Load (0.3ms)[0m  [1m[34mSELECT  "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "rounds" ("user_id", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["deck_id", 1], ["created_at", "2017-08-28 23:22:21.983227"], ["updated_at", "2017-08-28 23:22:21.983227"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/rounds/5/cards/1
+Completed 302 Found in 20ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/rounds/5/cards/1" for 127.0.0.1 at 2017-08-28 16:22:21 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"round_id"=>"5", "id"=>"1"}
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cards/show.html.erb within layouts/application
+  Rendered cards/show.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 27ms (Views: 20.9ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/decks/1/rounds" for 127.0.0.1 at 2017-08-28 16:31:09 -0700
+Processing by RoundsController#create as HTML
+  Parameters: {"authenticity_token"=>"P/MCI2Y7RcWzFjuu8isBtsSXwVgC1Q29GQZicSZn8ZCbWG1fhnhoCufl0GfIrzxz40cLwhJJ6jpQ3UAILdWSmA==", "deck_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDeck Load (0.2ms)[0m  [1m[34mSELECT  "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "rounds" ("user_id", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["deck_id", 1], ["created_at", "2017-08-28 23:31:10.027036"], ["updated_at", "2017-08-28 23:31:10.027036"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/rounds/6/cards/1
+Completed 302 Found in 29ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/rounds/6/cards/1" for 127.0.0.1 at 2017-08-28 16:31:10 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"round_id"=>"6", "id"=>"1"}
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cards/show.html.erb within layouts/application
+  Rendered cards/show.html.erb within layouts/application (19.5ms)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 2.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `guessed_answer' for #<Guess:0x007ffd7b0db008>
+Did you mean?  guess_counter_was):
+    4: <h3>Answer:</h3>
+    5: <%=form_for @guess, url: {action: 'create'} do |f| %>
+    6:   <%= f.label :guessed_answer, 'Your Guess:'  %>
+    7:   <%= f.text_field :guessed_answer %>
+    8:   <br>
+    9:   <br>
+   10: <% end %>
+  
+app/views/cards/show.html.erb:7:in `block in _app_views_cards_show_html_erb___3728921012312329240_70363293017620'
+app/views/cards/show.html.erb:5:in `_app_views_cards_show_html_erb___3728921012312329240_70363293017620'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.1ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (90.1ms)
+Started GET "/decks/1" for 127.0.0.1 at 2017-08-28 16:32:46 -0700
+Processing by DecksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDeck Load (0.2ms)[0m  [1m[34mSELECT  "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering decks/show.html.erb within layouts/application
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 1]]
+  Rendered decks/show.html.erb within layouts/application (4.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 28ms (Views: 23.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/decks/1/rounds" for 127.0.0.1 at 2017-08-28 16:32:48 -0700
+Processing by RoundsController#create as HTML
+  Parameters: {"authenticity_token"=>"3RXN+aHaz9wW+XtgnO2NoczJSzt5P4vKNrCCTgs6dDJ5vqKFQZniE0IKkKmmabBk6xmBoWmjbE1/a6A3AIgXOg==", "deck_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDeck Load (0.3ms)[0m  [1m[34mSELECT  "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "rounds" ("user_id", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["deck_id", 1], ["created_at", "2017-08-28 23:32:48.074260"], ["updated_at", "2017-08-28 23:32:48.074260"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/rounds/7/cards/1
+Completed 302 Found in 8ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/rounds/7/cards/1" for 127.0.0.1 at 2017-08-28 16:32:48 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"round_id"=>"7", "id"=>"1"}
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cards/show.html.erb within layouts/application
+  Rendered cards/show.html.erb within layouts/application (12.9ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `guessed_answer' for #<Guess:0x007ffd7bb06140>
+Did you mean?  guess_counter_was):
+    4: <h3>Answer:</h3>
+    5: <%=form_for @guess, url: {action: 'create'} do |f| %>
+    6:   <%= f.label :guessed_answer, 'Your Guess:'  %>
+    7:   <%= f.text_field :guessed_answer %>
+    8:   <br>
+    9:   <br>
+   10:   <%=f.hidden_field :user_id, current_user.id %>
+  
+app/views/cards/show.html.erb:7:in `block in _app_views_cards_show_html_erb___3728921012312329240_70363339302360'
+app/views/cards/show.html.erb:5:in `_app_views_cards_show_html_erb___3728921012312329240_70363339302360'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.3ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (91.8ms)
+Started POST "/decks/1/rounds" for 127.0.0.1 at 2017-08-28 16:33:06 -0700
+Processing by RoundsController#create as HTML
+  Parameters: {"authenticity_token"=>"3RXN+aHaz9wW+XtgnO2NoczJSzt5P4vKNrCCTgs6dDJ5vqKFQZniE0IKkKmmabBk6xmBoWmjbE1/a6A3AIgXOg==", "deck_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDeck Load (0.3ms)[0m  [1m[34mSELECT  "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "rounds" ("user_id", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["deck_id", 1], ["created_at", "2017-08-28 23:33:06.841533"], ["updated_at", "2017-08-28 23:33:06.841533"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/rounds/8/cards/1
+Completed 302 Found in 7ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/rounds/8/cards/1" for 127.0.0.1 at 2017-08-28 16:33:06 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"round_id"=>"8", "id"=>"1"}
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cards/show.html.erb within layouts/application
+  Rendered cards/show.html.erb within layouts/application (14.9ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `guessed_answer' for #<Guess:0x007ffd7d90a808>
+Did you mean?  guess_counter_was):
+    4: <h3>Answer:</h3>
+    5: <%=form_for @guess, url: {action: 'create'} do |f| %>
+    6:   <%= f.label :guessed_answer, 'Your Guess:'  %>
+    7:   <%= f.text_field :guessed_answer %>
+    8:   <br>
+    9:   <br>
+   10:   <%=f.hidden_field :user_id, current_user.id %>
+  
+app/views/cards/show.html.erb:7:in `block in _app_views_cards_show_html_erb___3728921012312329240_70363355040040'
+app/views/cards/show.html.erb:5:in `_app_views_cards_show_html_erb___3728921012312329240_70363355040040'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.8ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (95.7ms)
+Started GET "/rounds/8/cards/1" for 127.0.0.1 at 2017-08-28 16:33:23 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"round_id"=>"8", "id"=>"1"}
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cards/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered cards/show.html.erb within layouts/application (7.7ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `merge' for 1:Fixnum):
+     7: 
+     8:   <br>
+     9:   <br>
+    10:   <%=f.hidden_field :user_id, current_user.id %>
+    11: <% end %>
+  
+app/views/cards/show.html.erb:10:in `block in _app_views_cards_show_html_erb___3728921012312329240_70363351912640'
+app/views/cards/show.html.erb:5:in `_app_views_cards_show_html_erb___3728921012312329240_70363351912640'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.2ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (96.3ms)
+Started GET "/rounds/8/cards/1" for 127.0.0.1 at 2017-08-28 16:33:24 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"round_id"=>"8", "id"=>"1"}
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cards/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered cards/show.html.erb within layouts/application (6.9ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `merge' for 1:Fixnum):
+     7: 
+     8:   <br>
+     9:   <br>
+    10:   <%=f.hidden_field :user_id, current_user.id %>
+    11: <% end %>
+  
+app/views/cards/show.html.erb:10:in `block in _app_views_cards_show_html_erb___3728921012312329240_70363293096740'
+app/views/cards/show.html.erb:5:in `_app_views_cards_show_html_erb___3728921012312329240_70363293096740'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.5ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (94.5ms)
+Started GET "/decks/1" for 127.0.0.1 at 2017-08-28 16:34:40 -0700
+Processing by DecksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDeck Load (0.2ms)[0m  [1m[34mSELECT  "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering decks/show.html.erb within layouts/application
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 1]]
+  Rendered decks/show.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 21ms (Views: 17.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/decks/1/rounds" for 127.0.0.1 at 2017-08-28 16:34:42 -0700
+Processing by RoundsController#create as HTML
+  Parameters: {"authenticity_token"=>"lcJxUZ6imNTt52DKk4cFYEWkbHGL3qr4h5XFfdDFDAgxaR4tfuG1G7kUiwOpAzilYnSm65tCTX/OTucE23dvAA==", "deck_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDeck Load (0.3ms)[0m  [1m[34mSELECT  "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "rounds" ("user_id", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["deck_id", 1], ["created_at", "2017-08-28 23:34:42.427192"], ["updated_at", "2017-08-28 23:34:42.427192"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/rounds/9/cards/1
+Completed 302 Found in 7ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/rounds/9/cards/1" for 127.0.0.1 at 2017-08-28 16:34:42 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"round_id"=>"9", "id"=>"1"}
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cards/show.html.erb within layouts/application
+  Rendered cards/show.html.erb within layouts/application (8.1ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `merge' for 1:Fixnum):
+     7: 
+     8:   <br>
+     9:   <br>
+    10:   <%=f.hidden_field :user_id, 1 %>
+    11: <% end %>
+  
+app/views/cards/show.html.erb:10:in `block in _app_views_cards_show_html_erb___3728921012312329240_70363355184180'
+app/views/cards/show.html.erb:5:in `_app_views_cards_show_html_erb___3728921012312329240_70363355184180'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.3ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (106.0ms)
+Started GET "/decks/1" for 127.0.0.1 at 2017-08-28 16:35:25 -0700
+Processing by DecksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDeck Load (0.2ms)[0m  [1m[34mSELECT  "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering decks/show.html.erb within layouts/application
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 1]]
+  Rendered decks/show.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 23ms (Views: 19.4ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/decks/1/rounds" for 127.0.0.1 at 2017-08-28 16:35:27 -0700
+Processing by RoundsController#create as HTML
+  Parameters: {"authenticity_token"=>"HnSKNzGOwM/KFqAbh2MYQ3wJ2+up136fdnbO+1OSIPK63+VL0c3tAJ7lS9K95yWGW9kRcblLmRg/reyCWCBD+g==", "deck_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDeck Load (0.2ms)[0m  [1m[34mSELECT  "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "rounds" ("user_id", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["deck_id", 1], ["created_at", "2017-08-28 23:35:27.620670"], ["updated_at", "2017-08-28 23:35:27.620670"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/rounds/10/cards/1
+Completed 302 Found in 8ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/rounds/10/cards/1" for 127.0.0.1 at 2017-08-28 16:35:27 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"round_id"=>"10", "id"=>"1"}
+  [1m[36mCard Load (0.5ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cards/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered cards/show.html.erb within layouts/application (10.1ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `merge' for 1:Fixnum):
+     6:   Stuff: <input type="text" name="stuff">
+     7:   <br>
+     8:   <br>
+     9:   <%=f.hidden_field :user_id, current_user.id %>
+    10: <% end %>
+  
+app/views/cards/show.html.erb:9:in `block in _app_views_cards_show_html_erb___3728921012312329240_70363338568780'
+app/views/cards/show.html.erb:5:in `_app_views_cards_show_html_erb___3728921012312329240_70363338568780'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.1ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.1ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (109.5ms)
+Started GET "/rounds/10/cards/1" for 127.0.0.1 at 2017-08-28 16:35:31 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"round_id"=>"10", "id"=>"1"}
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cards/show.html.erb within layouts/application
+  Rendered cards/show.html.erb within layouts/application (5.6ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"create", :controller=>"cards", :id=>"1", :round_id=>"10"}):
+    2: <%= @card.question %>
+    3: 
+    4: <h3>Answer:</h3>
+    5: <%=form_for @guess, url: {action: 'create'} do |f| %>
+    6:   Stuff: <input type="text" name="stuff">
+    7:   <br>
+    8:   <br>
+  
+app/views/cards/show.html.erb:5:in `_app_views_cards_show_html_erb___3728921012312329240_70363301565480'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.3ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (96.4ms)
+Started GET "/decks/1" for 127.0.0.1 at 2017-08-28 16:38:18 -0700
+Processing by DecksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDeck Load (0.3ms)[0m  [1m[34mSELECT  "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering decks/show.html.erb within layouts/application
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 1]]
+  Rendered decks/show.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 23ms (Views: 20.6ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/decks/1/rounds" for 127.0.0.1 at 2017-08-28 16:38:20 -0700
+Processing by RoundsController#create as HTML
+  Parameters: {"authenticity_token"=>"+wN95SatK3fBBP8XsczV8cXUsK898FaqIiJO5Ivp6ztfqBKZxu4GuJX3FN6LSOg04gR6NS1ssS1r+WydgFuIMw==", "deck_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDeck Load (0.2ms)[0m  [1m[34mSELECT  "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "rounds" ("user_id", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["deck_id", 1], ["created_at", "2017-08-28 23:38:20.362574"], ["updated_at", "2017-08-28 23:38:20.362574"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/rounds/11/cards/1
+Completed 302 Found in 6ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/rounds/11/cards/1" for 127.0.0.1 at 2017-08-28 16:38:20 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"round_id"=>"11", "id"=>"1"}
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cards/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered cards/show.html.erb within layouts/application (24.2ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"create", :controller=>"cards", :id=>"1", :round_id=>"11"}):
+    2: <%= @card.question %>
+    3: 
+    4: <h3>Answer:</h3>
+    5: <%=form_for @guess, url: {action: 'create'} do |f| %>
+    6: 
+    7:   <br>
+    8:   <br>
+  
+app/views/cards/show.html.erb:5:in `_app_views_cards_show_html_erb___3728921012312329240_70363294429580'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.1ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (102.0ms)
+Started GET "/rounds/11/cards/1" for 127.0.0.1 at 2017-08-28 16:45:08 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"round_id"=>"11", "id"=>"1"}
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRound Load (0.3ms)[0m  [1m[34mSELECT  "rounds".* FROM "rounds" WHERE "rounds"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering cards/show.html.erb within layouts/application
+  Rendered cards/show.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 8.2ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"create", :controller=>"cards", :id=>"1", :round_id=>"11"}):
+    2: <%= @card.question %>
+    3: 
+    4: <h3>Answer:</h3>
+    5: <%=form_for @guess, url: {action: 'create'} do |f| %>
+    6: 
+    7:   <br>
+    8:   <br>
+  
+app/views/cards/show.html.erb:5:in `_app_views_cards_show_html_erb___3728921012312329240_70363340230040'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.2ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (111.9ms)
+Started GET "/decks/1" for 127.0.0.1 at 2017-08-28 16:45:14 -0700
+Processing by DecksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDeck Load (0.2ms)[0m  [1m[34mSELECT  "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering decks/show.html.erb within layouts/application
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 1]]
+  Rendered decks/show.html.erb within layouts/application (6.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 53ms (Views: 35.7ms | ActiveRecord: 5.7ms)
+
+
+Started POST "/decks/1/rounds" for 127.0.0.1 at 2017-08-28 16:45:16 -0700
+Processing by RoundsController#create as HTML
+  Parameters: {"authenticity_token"=>"5AiKTGU49naWW7NBl6TcoSJCudhwKhyts1GbZUvn0blAo+UwhXvbucKoWIitIOFkBZJzQmC2+yr6irkcQFWysQ==", "deck_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDeck Load (0.2ms)[0m  [1m[34mSELECT  "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "rounds" ("user_id", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["deck_id", 1], ["created_at", "2017-08-28 23:45:16.254675"], ["updated_at", "2017-08-28 23:45:16.254675"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/rounds/12/cards/1
+Completed 302 Found in 10ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/rounds/12/cards/1" for 127.0.0.1 at 2017-08-28 16:45:16 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"round_id"=>"12", "id"=>"1"}
+  [1m[36mCard Load (0.5ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRound Load (0.6ms)[0m  [1m[34mSELECT  "rounds".* FROM "rounds" WHERE "rounds"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering cards/show.html.erb within layouts/application
+  Rendered cards/show.html.erb within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"create", :controller=>"cards", :id=>"1", :round_id=>"12"}):
+    2: <%= @card.question %>
+    3: 
+    4: <h3>Answer:</h3>
+    5: <%=form_for @guess, url: {action: 'create'} do |f| %>
+    6: 
+    7:   <br>
+    8:   <br>
+  
+app/views/cards/show.html.erb:5:in `_app_views_cards_show_html_erb___3728921012312329240_70363352520620'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.6ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (108.7ms)
+Started GET "/rounds/12/cards/1" for 127.0.0.1 at 2017-08-28 16:46:47 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"round_id"=>"12", "id"=>"1"}
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRound Load (0.4ms)[0m  [1m[34mSELECT  "rounds".* FROM "rounds" WHERE "rounds"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering cards/show.html.erb within layouts/application
+  Rendered cards/show.html.erb within layouts/application (4.5ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"create", :controller=>"cards", :id=>"1", :round_id=>"12"}):
+    2: <%= @card.question %>
+    3: 
+    4: <h3>Answer:</h3>
+    5: <%=form_for @guess, url: {action: 'create'} do |f| %>
+    6: 
+    7:   <br>
+    8:   <br>
+  
+app/views/cards/show.html.erb:5:in `_app_views_cards_show_html_erb___3728921012312329240_70363334065800'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.8ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (92.1ms)
+Started GET "/rounds/12/cards/1" for 127.0.0.1 at 2017-08-28 16:47:54 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"round_id"=>"12", "id"=>"1"}
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRound Load (0.4ms)[0m  [1m[34mSELECT  "rounds".* FROM "rounds" WHERE "rounds"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering cards/show.html.erb within layouts/application
+  Rendered cards/show.html.erb within layouts/application (4.3ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"create", :controller=>"cards", :id=>"1", :round_id=>"12"}):
+    2: <%= @card.question %>
+    3: 
+    4: <h3>Answer:</h3>
+    5: <%=form_for @guess, url: {action: 'create'} do |f| %>
+    6: 
+    7:   <br>
+    8:   <br>
+  
+app/views/cards/show.html.erb:5:in `_app_views_cards_show_html_erb___3728921012312329240_70363294677220'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.7ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (92.4ms)
+Started GET "/rounds/12/cards/1" for 127.0.0.1 at 2017-08-28 16:50:45 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"round_id"=>"12", "id"=>"1"}
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRound Load (0.5ms)[0m  [1m[34mSELECT  "rounds".* FROM "rounds" WHERE "rounds"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering cards/show.html.erb within layouts/application
+  Rendered cards/show.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"create", :controller=>"cards", :id=>"1", :round_id=>"12"}):
+    2: <%= @card.question %>
+    3: 
+    4: <h3>Answer:</h3>
+    5: <%=form_for @guess, url: {action: 'create'} do |f| %>
+    6:   <%=f.hidden_field :round_id, value: @round.id %>
+    7: <% end %>
+  
+app/views/cards/show.html.erb:5:in `_app_views_cards_show_html_erb___3728921012312329240_70363355262800'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.8ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (90.6ms)
+Started GET "/rounds/12/cards/1" for 127.0.0.1 at 2017-08-28 16:52:12 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"round_id"=>"12", "id"=>"1"}
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRound Load (0.4ms)[0m  [1m[34mSELECT  "rounds".* FROM "rounds" WHERE "rounds"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering cards/show.html.erb within layouts/application
+  Rendered cards/show.html.erb within layouts/application (108.6ms)
+Completed 500 Internal Server Error in 120ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `guesses_path' for #<#<Class:0x007ffd7d975608>:0x007ffd7b6700e0>):
+    2: <%= @card.question %>
+    3: 
+    4: <h3>Answer:</h3>
+    5: <%=form_for @guess do |f| %>
+    6:   <%=f.hidden_field :round_id, value: @round.id %>
+    7: <% end %>
+  
+app/views/cards/show.html.erb:5:in `_app_views_cards_show_html_erb___3728921012312329240_70363336902060'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.6ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (90.5ms)
+Started GET "/rounds/12/cards/1" for 127.0.0.1 at 2017-08-28 16:53:36 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"round_id"=>"12", "id"=>"1"}
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRound Load (0.3ms)[0m  [1m[34mSELECT  "rounds".* FROM "rounds" WHERE "rounds"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering cards/show.html.erb within layouts/application
+  Rendered cards/show.html.erb within layouts/application (182.7ms)
+Completed 500 Internal Server Error in 192ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `card_guesses_path' for #<#<Class:0x007ffd7d975608>:0x007ffd78f101f8>
+Did you mean?  card_guess_index_path):
+    2: <%= @card.question %>
+    3: 
+    4: <h3>Answer:</h3>
+    5: <%=form_for [@card, @guess] do |f| %>
+    6:   <%=f.hidden_field :round_id, value: @round.id %>
+    7: <% end %>
+  
+app/views/cards/show.html.erb:5:in `_app_views_cards_show_html_erb___3728921012312329240_70363316259020'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.2ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (91.7ms)
+Started GET "/rounds/12/cards/1" for 127.0.0.1 at 2017-08-28 16:57:08 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"round_id"=>"12", "id"=>"1"}
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRound Load (0.3ms)[0m  [1m[34mSELECT  "rounds".* FROM "rounds" WHERE "rounds"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering cards/show.html.erb within layouts/application
+  Rendered cards/show.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 64ms (Views: 28.8ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/rounds/12/cards/1" for 127.0.0.1 at 2017-08-28 17:06:57 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"round_id"=>"12", "id"=>"1"}
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRound Load (0.2ms)[0m  [1m[34mSELECT  "rounds".* FROM "rounds" WHERE "rounds"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering cards/show.html.erb within layouts/application
+  Rendered cards/show.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.5ms)
+
+
+  
+SyntaxError (/Users/apprentice/flashcards_rails/app/views/cards/show.html.erb:15: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/apprentice/flashcards_rails/app/views/cards/show.html.erb:17: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/cards/show.html.erb:15: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/cards/show.html.erb:17: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.8ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (96.3ms)
+Started GET "/rounds/12/cards/1" for 127.0.0.1 at 2017-08-28 17:07:02 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"round_id"=>"12", "id"=>"1"}
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRound Load (0.4ms)[0m  [1m[34mSELECT  "rounds".* FROM "rounds" WHERE "rounds"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering cards/show.html.erb within layouts/application
+  Rendered cards/show.html.erb within layouts/application (4.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 51ms (Views: 41.7ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/rounds/12/cards/1" for 127.0.0.1 at 2017-08-28 17:07:17 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"round_id"=>"12", "id"=>"1"}
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRound Load (0.2ms)[0m  [1m[34mSELECT  "rounds".* FROM "rounds" WHERE "rounds"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering cards/show.html.erb within layouts/application
+  Rendered cards/show.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 24ms (Views: 20.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/rounds/12/cards/1" for 127.0.0.1 at 2017-08-28 17:07:25 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"round_id"=>"12", "id"=>"1"}
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRound Load (0.2ms)[0m  [1m[34mSELECT  "rounds".* FROM "rounds" WHERE "rounds"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering cards/show.html.erb within layouts/application
+  Rendered cards/show.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 22ms (Views: 18.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/rounds/12/cards/1" for 127.0.0.1 at 2017-08-28 17:07:32 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"round_id"=>"12", "id"=>"1"}
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRound Load (0.2ms)[0m  [1m[34mSELECT  "rounds".* FROM "rounds" WHERE "rounds"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering cards/show.html.erb within layouts/application
+  Rendered cards/show.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 26ms (Views: 21.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/rounds/12/cards/1" for 127.0.0.1 at 2017-08-28 17:14:58 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"round_id"=>"12", "id"=>"1"}
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRound Load (0.2ms)[0m  [1m[34mSELECT  "rounds".* FROM "rounds" WHERE "rounds"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering cards/show.html.erb within layouts/application
+  [1m[36mGuess Load (0.8ms)[0m  [1m[34mSELECT "guesses".* FROM "guesses" WHERE "guesses"."round_id" = $1 AND "guesses"."card_id" = $2[0m  [["round_id", 12], ["card_id", 1]]
+  Rendered cards/show.html.erb within layouts/application (10.0ms)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 8.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `to_key' for #<ActiveRecord::Relation []>
+Did you mean?  to_query
+               to_set
+               to_ary):
+     6: 
+     7: <% if @guess %>
+     8: 
+     9:   <%=form_for [@card, @guess], url: { action: "update" } do |f| %>
+    10:     <%= label_tag :given_answer, 'Answer: ' %>
+    11:     <%= text_field_tag :given_answer %>
+    12:     <%=f.hidden_field :round_id, value: @round.id %>
+  
+app/views/cards/show.html.erb:9:in `_app_views_cards_show_html_erb___3728921012312329240_70363295699260'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.6ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (93.1ms)
+Started GET "/rounds/12/cards/1" for 127.0.0.1 at 2017-08-28 17:16:38 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"round_id"=>"12", "id"=>"1"}
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRound Load (0.3ms)[0m  [1m[34mSELECT  "rounds".* FROM "rounds" WHERE "rounds"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering cards/show.html.erb within layouts/application
+  [1m[36mGuess Load (0.6ms)[0m  [1m[34mSELECT "guesses".* FROM "guesses" WHERE "guesses"."round_id" = $1 AND "guesses"."card_id" = $2[0m  [["round_id", 12], ["card_id", 1]]
+  Rendered cards/show.html.erb within layouts/application (8.5ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `to_key' for #<ActiveRecord::Relation []>
+Did you mean?  to_query
+               to_set
+               to_ary):
+     6: 
+     7: <% if @guess %>
+     8: 
+     9:   <%=form_for [@card, @guess], html: { method: :update } do |f| %>
+    10:     <%= label_tag :given_answer, 'Answer: ' %>
+    11:     <%= text_field_tag :given_answer %>
+    12:     <%=f.hidden_field :round_id, value: @round.id %>
+  
+app/views/cards/show.html.erb:9:in `_app_views_cards_show_html_erb___3728921012312329240_70363359643960'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (88.4ms)
+Started GET "/rounds/12/cards/1" for 127.0.0.1 at 2017-08-28 17:17:14 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"round_id"=>"12", "id"=>"1"}
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRound Load (0.4ms)[0m  [1m[34mSELECT  "rounds".* FROM "rounds" WHERE "rounds"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering cards/show.html.erb within layouts/application
+  [1m[36mGuess Load (0.7ms)[0m  [1m[34mSELECT "guesses".* FROM "guesses" WHERE "guesses"."round_id" = $1 AND "guesses"."card_id" = $2[0m  [["round_id", 12], ["card_id", 1]]
+  Rendered cards/show.html.erb within layouts/application (8.2ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `to_key' for #<ActiveRecord::Relation []>
+Did you mean?  to_query
+               to_set
+               to_ary):
+     6: 
+     7: <% if @guess %>
+     8: 
+     9:   <%=form_for [@card, @guess], html: { method: "update" } do |f| %>
+    10:     <%= label_tag :given_answer, 'Answer: ' %>
+    11:     <%= text_field_tag :given_answer %>
+    12:     <%=f.hidden_field :round_id, value: @round.id %>
+  
+app/views/cards/show.html.erb:9:in `_app_views_cards_show_html_erb___3728921012312329240_70363340824320'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.4ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (91.1ms)
+Started GET "/rounds/12/cards/1" for 127.0.0.1 at 2017-08-28 17:18:13 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"round_id"=>"12", "id"=>"1"}
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRound Load (0.3ms)[0m  [1m[34mSELECT  "rounds".* FROM "rounds" WHERE "rounds"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering cards/show.html.erb within layouts/application
+  [1m[36mGuess Load (0.6ms)[0m  [1m[34mSELECT "guesses".* FROM "guesses" WHERE "guesses"."round_id" = $1 AND "guesses"."card_id" = $2[0m  [["round_id", 12], ["card_id", 1]]
+  Rendered cards/show.html.erb within layouts/application (8.4ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `to_key' for #<ActiveRecord::Relation []>
+Did you mean?  to_query
+               to_set
+               to_ary):
+     6: 
+     7: <% if @guess %>
+     8: 
+     9:   <%=form_for [@card, @guess], url: { method: "update" } do |f| %>
+    10:     <%= label_tag :given_answer, 'Answer: ' %>
+    11:     <%= text_field_tag :given_answer %>
+    12:     <%=f.hidden_field :round_id, value: @round.id %>
+  
+app/views/cards/show.html.erb:9:in `_app_views_cards_show_html_erb___3728921012312329240_70363333741940'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (90.6ms)
+Started GET "/rounds/12/cards/1" for 127.0.0.1 at 2017-08-28 17:19:16 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"round_id"=>"12", "id"=>"1"}
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRound Load (0.4ms)[0m  [1m[34mSELECT  "rounds".* FROM "rounds" WHERE "rounds"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering cards/show.html.erb within layouts/application
+  [1m[36mGuess Load (0.5ms)[0m  [1m[34mSELECT "guesses".* FROM "guesses" WHERE "guesses"."round_id" = $1 AND "guesses"."card_id" = $2[0m  [["round_id", 12], ["card_id", 1]]
+  Rendered cards/show.html.erb within layouts/application (9.8ms)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `to_key' for #<ActiveRecord::Relation []>
+Did you mean?  to_query
+               to_set
+               to_ary):
+     6: 
+     7: <% if @guess %>
+     8: 
+     9:   <%=form_for [@card, @guess], url: { method: "update" } do |f| %>
+    10:     <%= label_tag :given_answer, 'Answer: ' %>
+    11:     <%= text_field_tag :given_answer %>
+    12:     <%=f.hidden_field :round_id, value: @round.id %>
+  
+app/views/cards/show.html.erb:9:in `_app_views_cards_show_html_erb___3728921012312329240_70363315952960'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.7ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (97.6ms)
+Started GET "/rounds/12/cards/1" for 127.0.0.1 at 2017-08-28 17:19:25 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"round_id"=>"12", "id"=>"1"}
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRound Load (0.3ms)[0m  [1m[34mSELECT  "rounds".* FROM "rounds" WHERE "rounds"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering cards/show.html.erb within layouts/application
+  [1m[36mGuess Load (0.4ms)[0m  [1m[34mSELECT "guesses".* FROM "guesses" WHERE "guesses"."round_id" = $1 AND "guesses"."card_id" = $2[0m  [["round_id", 12], ["card_id", 1]]
+  Rendered cards/show.html.erb within layouts/application (11.7ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `to_key' for #<ActiveRecord::Relation []>
+Did you mean?  to_query
+               to_set
+               to_ary):
+     6: 
+     7: <% if @guess %>
+     8: 
+     9:   <%=form_for [@card, @guess], url: { method: :update } do |f| %>
+    10:     <%= label_tag :given_answer, 'Answer: ' %>
+    11:     <%= text_field_tag :given_answer %>
+    12:     <%=f.hidden_field :round_id, value: @round.id %>
+  
+app/views/cards/show.html.erb:9:in `_app_views_cards_show_html_erb___3728921012312329240_70363351058080'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.1ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (99.3ms)
+Started GET "/rounds/12/cards/1" for 127.0.0.1 at 2017-08-28 17:19:57 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"round_id"=>"12", "id"=>"1"}
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRound Load (0.3ms)[0m  [1m[34mSELECT  "rounds".* FROM "rounds" WHERE "rounds"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering cards/show.html.erb within layouts/application
+  [1m[36mGuess Load (0.5ms)[0m  [1m[34mSELECT "guesses".* FROM "guesses" WHERE "guesses"."round_id" = $1 AND "guesses"."card_id" = $2[0m  [["round_id", 12], ["card_id", 1]]
+  Rendered cards/show.html.erb within layouts/application (11.2ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `to_key' for #<ActiveRecord::Relation []>
+Did you mean?  to_query
+               to_set
+               to_ary):
+     6: 
+     7: <% if @guess %>
+     8: 
+     9:   <%=form_for [@card, @guess], url: card_guess_path(@card, @guess) do |f| %>
+    10:     <%= label_tag :given_answer, 'Answer: ' %>
+    11:     <%= text_field_tag :given_answer %>
+    12:     <%=f.hidden_field :round_id, value: @round.id %>
+  
+app/views/cards/show.html.erb:9:in `_app_views_cards_show_html_erb___3728921012312329240_70363358960900'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.6ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (93.9ms)
+Started GET "/rounds/12/cards/1" for 127.0.0.1 at 2017-08-28 17:21:34 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"round_id"=>"12", "id"=>"1"}
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRound Load (0.2ms)[0m  [1m[34mSELECT  "rounds".* FROM "rounds" WHERE "rounds"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mGuess Load (0.3ms)[0m  [1m[34mSELECT  "guesses".* FROM "guesses" WHERE "guesses"."round_id" = $1 AND "guesses"."card_id" = $2 LIMIT $3[0m  [["round_id", 12], ["card_id", 1], ["LIMIT", 1]]
+  Rendering cards/show.html.erb within layouts/application
+  Rendered cards/show.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    15: 
+    16: <% else %>
+    17: 
+    18:   <%=form_for [@card, @guess] do |f| %>
+    19:     <%= label_tag :given_answer, 'Answer: ' %>
+    20:     <%= text_field_tag :given_answer %>
+    21:     <%=f.hidden_field :round_id, value: @round.id %>
+  
+app/views/cards/show.html.erb:18:in `_app_views_cards_show_html_erb___3728921012312329240_70363315124400'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (20.4ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (106.3ms)
+Started GET "/rounds/12/cards/1" for 127.0.0.1 at 2017-08-28 17:22:12 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"round_id"=>"12", "id"=>"1"}
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRound Load (0.2ms)[0m  [1m[34mSELECT  "rounds".* FROM "rounds" WHERE "rounds"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mGuess Load (0.4ms)[0m  [1m[34mSELECT  "guesses".* FROM "guesses" WHERE "guesses"."round_id" = $1 AND "guesses"."card_id" = $2 LIMIT $3[0m  [["round_id", 12], ["card_id", 1], ["LIMIT", 1]]
+  Rendering cards/show.html.erb within layouts/application
+  Rendered cards/show.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 2.1ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"update", :card_id=>"1", :controller=>"guesses", :id=>nil} missing required keys: [:id]):
+     6: 
+     7: <% if @guess %>
+     8: 
+     9:   <%=form_for [@card, @guess], url: card_guess_path(@card, @guess) do |f| %>
+    10:     <%= label_tag :given_answer, 'Answer: ' %>
+    11:     <%= text_field_tag :given_answer %>
+    12:     <%=f.hidden_field :round_id, value: @round.id %>
+  
+app/views/cards/show.html.erb:9:in `_app_views_cards_show_html_erb___3728921012312329240_70363351716440'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.3ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (91.6ms)
+Started PUT "/__web_console/repl_sessions/1565ee2456aac36a296f4ff645d4f55c" for 127.0.0.1 at 2017-08-28 17:22:37 -0700
+Started PUT "/__web_console/repl_sessions/1565ee2456aac36a296f4ff645d4f55c" for 127.0.0.1 at 2017-08-28 17:22:37 -0700
+Started PUT "/__web_console/repl_sessions/1565ee2456aac36a296f4ff645d4f55c" for 127.0.0.1 at 2017-08-28 17:22:39 -0700
+Started PUT "/__web_console/repl_sessions/1565ee2456aac36a296f4ff645d4f55c" for 127.0.0.1 at 2017-08-28 17:22:41 -0700
+Started PUT "/__web_console/repl_sessions/1565ee2456aac36a296f4ff645d4f55c" for 127.0.0.1 at 2017-08-28 17:22:48 -0700
+Started PUT "/__web_console/repl_sessions/1565ee2456aac36a296f4ff645d4f55c" for 127.0.0.1 at 2017-08-28 17:22:50 -0700
+Started PUT "/__web_console/repl_sessions/1565ee2456aac36a296f4ff645d4f55c" for 127.0.0.1 at 2017-08-28 17:22:53 -0700
+  [1m[36mGuess Load (0.6ms)[0m  [1m[34mSELECT  "guesses".* FROM "guesses" ORDER BY "guesses"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/rounds/12/cards/1" for 127.0.0.1 at 2017-08-28 17:23:37 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"round_id"=>"12", "id"=>"1"}
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRound Load (0.3ms)[0m  [1m[34mSELECT  "rounds".* FROM "rounds" WHERE "rounds"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mGuess Load (0.3ms)[0m  [1m[34mSELECT  "guesses".* FROM "guesses" WHERE "guesses"."round_id" = $1 AND "guesses"."card_id" = $2 LIMIT $3[0m  [["round_id", 12], ["card_id", 1], ["LIMIT", 1]]
+  Rendering cards/show.html.erb within layouts/application
+  Rendered cards/show.html.erb within layouts/application (3.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 44ms (Views: 35.8ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/cards/1/guesses" for 127.0.0.1 at 2017-08-28 17:23:42 -0700
+Processing by GuessesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DtBktNGjjtt29FgcaRn4FcTNGjAoAm3XDmY3FX6gmoiqewvIMeCjFCIHs9VTncXQ4x3QqjieilBHvRVsdRL5gA==", "given_answer"=>"Ben", "guess"=>{"round_id"=>"12"}, "commit"=>"Submit Answer", "card_id"=>"1"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRound Load (0.4ms)[0m  [1m[34mSELECT  "rounds".* FROM "rounds" WHERE "rounds"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.1ms)
+
+
+  
+NoMethodError (undefined method `answer' for nil:NilClass):
+  
+app/controllers/guesses_controller.rb:7:in `create'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.4ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (89.1ms)
+Started POST "/cards/1/guesses" for 127.0.0.1 at 2017-08-28 17:25:14 -0700
+Processing by GuessesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DtBktNGjjtt29FgcaRn4FcTNGjAoAm3XDmY3FX6gmoiqewvIMeCjFCIHs9VTncXQ4x3QqjieilBHvRVsdRL5gA==", "given_answer"=>"Ben", "guess"=>{"round_id"=>"12"}, "commit"=>"Submit Answer", "card_id"=>"1"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRound Load (0.3ms)[0m  [1m[34mSELECT  "rounds".* FROM "rounds" WHERE "rounds"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::MissingTemplate (Missing template guesses/create, application/create with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/apprentice/flashcards_rails/app/views"
+):
+  
+app/controllers/guesses_controller.rb:13:in `create'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.8ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (92.6ms)
+Started POST "/cards/1/guesses" for 127.0.0.1 at 2017-08-28 17:28:30 -0700
+Processing by GuessesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DtBktNGjjtt29FgcaRn4FcTNGjAoAm3XDmY3FX6gmoiqewvIMeCjFCIHs9VTncXQ4x3QqjieilBHvRVsdRL5gA==", "given_answer"=>"Ben", "guess"=>{"round_id"=>"12"}, "commit"=>"Submit Answer", "card_id"=>"1"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRound Load (0.2ms)[0m  [1m[34mSELECT  "rounds".* FROM "rounds" WHERE "rounds"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cards/show.html.erb within layouts/application
+  Rendered cards/show.html.erb within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+     7: <%=form_for [@card, @guess] do |f| %>
+     8:   <%= label_tag :given_answer, 'Answer: ' %>
+     9:   <%= text_field_tag :given_answer %>
+    10:   <%=f.hidden_field :round_id, value: @round.id %>
+    11:   <%= submit_tag 'Submit Answer' %>
+    12: <% end %>
+  
+app/views/cards/show.html.erb:10:in `block in _app_views_cards_show_html_erb___3728921012312329240_70363300058360'
+app/views/cards/show.html.erb:7:in `_app_views_cards_show_html_erb___3728921012312329240_70363300058360'
+app/controllers/guesses_controller.rb:13:in `create'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.8ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (94.1ms)
+Started POST "/cards/1/guesses" for 127.0.0.1 at 2017-08-28 17:29:24 -0700
+Processing by GuessesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DtBktNGjjtt29FgcaRn4FcTNGjAoAm3XDmY3FX6gmoiqewvIMeCjFCIHs9VTncXQ4x3QqjieilBHvRVsdRL5gA==", "given_answer"=>"Ben", "guess"=>{"round_id"=>"12"}, "commit"=>"Submit Answer", "card_id"=>"1"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRound Load (0.3ms)[0m  [1m[34mSELECT  "rounds".* FROM "rounds" WHERE "rounds"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cards/show.html.erb within layouts/application
+  Rendered cards/show.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 53ms (Views: 39.2ms | ActiveRecord: 5.5ms)
+
+
+Started POST "/cards/1/guesses" for 127.0.0.1 at 2017-08-28 17:31:11 -0700
+Processing by GuessesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DtBktNGjjtt29FgcaRn4FcTNGjAoAm3XDmY3FX6gmoiqewvIMeCjFCIHs9VTncXQ4x3QqjieilBHvRVsdRL5gA==", "given_answer"=>"Ben", "guess"=>{"round_id"=>"12"}, "commit"=>"Submit Answer", "card_id"=>"1"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRound Load (0.3ms)[0m  [1m[34mSELECT  "rounds".* FROM "rounds" WHERE "rounds"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cards/show.html.erb within layouts/application
+  Rendered cards/show.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 29ms (Views: 21.7ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/cards/1/guesses" for 127.0.0.1 at 2017-08-28 17:31:21 -0700
+Processing by GuessesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DtBktNGjjtt29FgcaRn4FcTNGjAoAm3XDmY3FX6gmoiqewvIMeCjFCIHs9VTncXQ4x3QqjieilBHvRVsdRL5gA==", "given_answer"=>"Ben", "guess"=>{"round_id"=>"12"}, "commit"=>"Submit Answer", "card_id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRound Load (0.3ms)[0m  [1m[34mSELECT  "rounds".* FROM "rounds" WHERE "rounds"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cards/show.html.erb within layouts/application
+  Rendered cards/show.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 27ms (Views: 21.3ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/cards/1/guesses" for 127.0.0.1 at 2017-08-28 17:31:28 -0700
+Processing by GuessesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E/S1UBIg+hw4nvJiHA6v+sOAUe9FhzewoVCF5V8KIya3X9os8mPX02xtGasmipI/5FCbdVUb0Dfoi6ecVLhALg==", "given_answer"=>"Shirley", "guess"=>{"round_id"=>"12"}, "commit"=>"Submit Answer", "card_id"=>"1"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRound Load (0.4ms)[0m  [1m[34mSELECT  "rounds".* FROM "rounds" WHERE "rounds"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cards/show.html.erb within layouts/application
+  Rendered cards/show.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 30ms (Views: 21.3ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/cards/1/guesses" for 127.0.0.1 at 2017-08-28 17:31:37 -0700
+Processing by GuessesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Vyai7BRA5SJ0fN/Xvc8aVgekJOyhXZl/KJI9TDPamYrzjc2Q9API7SCPNB6HSyeTIHTudrHBfvhhSR81OGj6gg==", "given_answer"=>"", "guess"=>{"round_id"=>"12"}, "commit"=>"Submit Answer", "card_id"=>"1"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRound Load (0.3ms)[0m  [1m[34mSELECT  "rounds".* FROM "rounds" WHERE "rounds"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cards/show.html.erb within layouts/application
+  Rendered cards/show.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 29ms (Views: 23.7ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/cards/1/guesses" for 127.0.0.1 at 2017-08-28 17:31:49 -0700
+Processing by GuessesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Vyai7BRA5SJ0fN/Xvc8aVgekJOyhXZl/KJI9TDPamYrzjc2Q9API7SCPNB6HSyeTIHTudrHBfvhhSR81OGj6gg==", "given_answer"=>"", "guess"=>{"round_id"=>"12"}, "commit"=>"Submit Answer", "card_id"=>"1"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRound Load (0.3ms)[0m  [1m[34mSELECT  "rounds".* FROM "rounds" WHERE "rounds"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cards/show.html.erb within layouts/application
+  Rendered cards/show.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 31ms (Views: 25.5ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/cards/1/guesses" for 127.0.0.1 at 2017-08-28 17:31:53 -0700
+Processing by GuessesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mZlX1uybFdYYoRSBb5MeiRGuztjUsjVI1o4YtSy9/c09MjiqDNg4GUxS/0hVFyNMNn4EQsQu0s+fVTrMJw+exQ==", "given_answer"=>"Bob", "guess"=>{"round_id"=>"12"}, "commit"=>"Submit Answer", "card_id"=>"1"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRound Load (0.2ms)[0m  [1m[34mSELECT  "rounds".* FROM "rounds" WHERE "rounds"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cards/show.html.erb within layouts/application
+  Rendered cards/show.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 26ms (Views: 19.3ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/cards/1/guesses" for 127.0.0.1 at 2017-08-28 17:33:18 -0700
+Processing by GuessesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mZlX1uybFdYYoRSBb5MeiRGuztjUsjVI1o4YtSy9/c09MjiqDNg4GUxS/0hVFyNMNn4EQsQu0s+fVTrMJw+exQ==", "given_answer"=>"Bob", "guess"=>{"round_id"=>"12"}, "commit"=>"Submit Answer", "card_id"=>"1"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRound Load (0.4ms)[0m  [1m[34mSELECT  "rounds".* FROM "rounds" WHERE "rounds"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 1.0ms)
+
+
+  
+NoMethodError (undefined method `+' for nil:NilClass):
+  
+app/controllers/guesses_controller.rb:6:in `create'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.8ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (92.6ms)
+Started POST "/cards/1/guesses" for 127.0.0.1 at 2017-08-28 17:33:25 -0700
+Processing by GuessesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mZlX1uybFdYYoRSBb5MeiRGuztjUsjVI1o4YtSy9/c09MjiqDNg4GUxS/0hVFyNMNn4EQsQu0s+fVTrMJw+exQ==", "given_answer"=>"Bob", "guess"=>{"round_id"=>"12"}, "commit"=>"Submit Answer", "card_id"=>"1"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRound Load (0.2ms)[0m  [1m[34mSELECT  "rounds".* FROM "rounds" WHERE "rounds"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cards/show.html.erb within layouts/application
+  Rendered cards/show.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 30.9ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/cards/1/guesses" for 127.0.0.1 at 2017-08-28 17:35:40 -0700
+Processing by GuessesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aRqqj5RNRnY5NisUKnmLHrzoydif4oRr2p52AvI29RHNscXzdA5ruW3FwN0Q/bbbmzgDQo9+Y+yTRVR7+YSWGQ==", "given_answer"=>"fgsgdfgfdsdfg", "guess"=>{"round_id"=>"12"}, "commit"=>"Submit Answer", "card_id"=>"1"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRound Load (0.2ms)[0m  [1m[34mSELECT  "rounds".* FROM "rounds" WHERE "rounds"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cards/show.html.erb within layouts/application
+  Rendered cards/show.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 65ms (Views: 27.3ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/cards/1/guesses" for 127.0.0.1 at 2017-08-28 17:36:02 -0700
+Processing by GuessesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JXFF1L8CKmw8FnSeHpKzggzRMTBX9fYL7JocqRPvs+KB2iqoX0EHo2jln1ckFo5HKwH7qkdpEYylQT7QGF3Q6g==", "given_answer"=>"gfdadsfagrsdgf", "guess"=>{"round_id"=>"12"}, "commit"=>"Submit Answer", "card_id"=>"1"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRound Load (0.2ms)[0m  [1m[34mSELECT  "rounds".* FROM "rounds" WHERE "rounds"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cards/show.html.erb within layouts/application
+  Rendered cards/show.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 29ms (Views: 22.7ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/cards/1/guesses" for 127.0.0.1 at 2017-08-28 17:37:09 -0700
+Processing by GuessesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JXFF1L8CKmw8FnSeHpKzggzRMTBX9fYL7JocqRPvs+KB2iqoX0EHo2jln1ckFo5HKwH7qkdpEYylQT7QGF3Q6g==", "given_answer"=>"gfdadsfagrsdgf", "guess"=>{"round_id"=>"12"}, "commit"=>"Submit Answer", "card_id"=>"1"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRound Load (0.3ms)[0m  [1m[34mSELECT  "rounds".* FROM "rounds" WHERE "rounds"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cards/show.html.erb within layouts/application
+  Rendered cards/show.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 63ms (Views: 27.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-28 17:37:35 -0700
+Processing by DecksController#index as HTML
+  Rendering decks/index.html.erb within layouts/application
+  [1m[36mDeck Load (0.4ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  Rendered decks/index.html.erb within layouts/application (8.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 35ms (Views: 26.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/decks/1" for 127.0.0.1 at 2017-08-28 17:37:37 -0700
+Processing by DecksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDeck Load (0.3ms)[0m  [1m[34mSELECT  "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering decks/show.html.erb within layouts/application
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 1]]
+  Rendered decks/show.html.erb within layouts/application (5.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 29ms (Views: 23.7ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/decks/1/rounds" for 127.0.0.1 at 2017-08-28 17:37:39 -0700
+Processing by RoundsController#create as HTML
+  Parameters: {"authenticity_token"=>"n6ansGrgLEaI2JIpc7lkSH93FyLRw1/KY41aGuiuxWY7DcjMiqMBidwreeBJPVmNWKfduMFfuE0qVnhj4xymbg==", "deck_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDeck Load (0.2ms)[0m  [1m[34mSELECT  "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "rounds" ("user_id", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["deck_id", 1], ["created_at", "2017-08-29 00:37:39.363434"], ["updated_at", "2017-08-29 00:37:39.363434"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/rounds/13/cards/1
+Completed 302 Found in 9ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/rounds/13/cards/1" for 127.0.0.1 at 2017-08-28 17:37:39 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"round_id"=>"13", "id"=>"1"}
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRound Load (0.3ms)[0m  [1m[34mSELECT  "rounds".* FROM "rounds" WHERE "rounds"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mGuess Load (0.4ms)[0m  [1m[34mSELECT  "guesses".* FROM "guesses" WHERE "guesses"."round_id" = $1 AND "guesses"."card_id" = $2 LIMIT $3[0m  [["round_id", 13], ["card_id", 1], ["LIMIT", 1]]
+  Rendering cards/show.html.erb within layouts/application
+  Rendered cards/show.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 36ms (Views: 29.4ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/cards/1/guesses" for 127.0.0.1 at 2017-08-28 17:38:11 -0700
+Processing by GuessesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V2WFfEHJM35A0UGxGxFWmJ0V/R2EuvTysfmbh/L+pNzzzuoAoYoesRQiqnghlWtdusU3h5QmE3X4Irn++UzH1A==", "given_answer"=>"fsdfafewafewafew", "guess"=>{"round_id"=>""}, "commit"=>"Submit Answer", "card_id"=>"1"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cards/show.html.erb within layouts/application
+  Rendered cards/show.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 28ms (Views: 20.4ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/cards/1/guesses" for 127.0.0.1 at 2017-08-28 17:38:58 -0700
+Processing by GuessesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V2WFfEHJM35A0UGxGxFWmJ0V/R2EuvTysfmbh/L+pNzzzuoAoYoesRQiqnghlWtdusU3h5QmE3X4Irn++UzH1A==", "given_answer"=>"fsdfafewafewafew", "guess"=>{"round_id"=>""}, "commit"=>"Submit Answer", "card_id"=>"1"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cards/show.html.erb within layouts/application
+  Rendered cards/show.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 62ms (Views: 31.9ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/cards/1/guesses" for 127.0.0.1 at 2017-08-28 17:41:15 -0700
+Processing by GuessesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V2WFfEHJM35A0UGxGxFWmJ0V/R2EuvTysfmbh/L+pNzzzuoAoYoesRQiqnghlWtdusU3h5QmE3X4Irn++UzH1A==", "given_answer"=>"fsdfafewafewafew", "guess"=>{"round_id"=>""}, "commit"=>"Submit Answer", "card_id"=>"1"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"cards", :id=>"1", :round_id=>nil} missing required keys: [:round_id]):
+  
+app/controllers/guesses_controller.rb:13:in `create'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (92.1ms)
+Started POST "/cards/1/guesses" for 127.0.0.1 at 2017-08-28 17:41:59 -0700
+Processing by GuessesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V2WFfEHJM35A0UGxGxFWmJ0V/R2EuvTysfmbh/L+pNzzzuoAoYoesRQiqnghlWtdusU3h5QmE3X4Irn++UzH1A==", "given_answer"=>"fsdfafewafewafew", "guess"=>{"round_id"=>""}, "commit"=>"Submit Answer", "card_id"=>"1"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"cards", :id=>"1", :round_id=>nil} missing required keys: [:round_id]):
+  
+app/controllers/guesses_controller.rb:13:in `create'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.6ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (90.4ms)
+Started POST "/cards/1/guesses" for 127.0.0.1 at 2017-08-28 17:42:14 -0700
+Processing by GuessesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V2WFfEHJM35A0UGxGxFWmJ0V/R2EuvTysfmbh/L+pNzzzuoAoYoesRQiqnghlWtdusU3h5QmE3X4Irn++UzH1A==", "given_answer"=>"fsdfafewafewafew", "guess"=>{"round_id"=>""}, "commit"=>"Submit Answer", "card_id"=>"1"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"cards", :id=>"1", :round_id=>nil} missing required keys: [:round_id]):
+  
+app/controllers/guesses_controller.rb:13:in `create'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.8ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (95.2ms)
+Started POST "/cards/1/guesses" for 127.0.0.1 at 2017-08-28 17:44:07 -0700
+Processing by GuessesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V2WFfEHJM35A0UGxGxFWmJ0V/R2EuvTysfmbh/L+pNzzzuoAoYoesRQiqnghlWtdusU3h5QmE3X4Irn++UzH1A==", "given_answer"=>"fsdfafewafewafew", "guess"=>{"round_id"=>""}, "commit"=>"Submit Answer", "card_id"=>"1"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"cards", :id=>"1", :round_id=>nil} missing required keys: [:round_id]):
+  
+app/controllers/guesses_controller.rb:13:in `create'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.8ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (91.4ms)
+Started POST "/cards/1/guesses" for 127.0.0.1 at 2017-08-28 17:44:36 -0700
+Processing by GuessesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V2WFfEHJM35A0UGxGxFWmJ0V/R2EuvTysfmbh/L+pNzzzuoAoYoesRQiqnghlWtdusU3h5QmE3X4Irn++UzH1A==", "given_answer"=>"fsdfafewafewafew", "guess"=>{"round_id"=>""}, "commit"=>"Submit Answer", "card_id"=>"1"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT  "cards".* FROM "cards" WHERE "cards"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"cards", :id=>"1", :round_id=>nil} missing required keys: [:round_id]):
+  
+app/controllers/guesses_controller.rb:14:in `create'
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (93.7ms)

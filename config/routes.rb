@@ -7,11 +7,15 @@ Rails.application.routes.draw do
   end
 
   resources :decks, only: [] do
-    resources :cards, only: [:show, :new, :create]
+    resources :cards, only: [:new, :create]
   end
 
   resources :cards, only: [] do
-    resources :guess, only: [:create]
+    resources :guesses, only: [:create, :update]
+  end
+
+  resources :rounds, only: [] do
+    resources :cards, only: [:show]
   end
 
   resources :sessions, only: [:new, :create, :destroy]
